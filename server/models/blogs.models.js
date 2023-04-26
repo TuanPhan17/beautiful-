@@ -2,33 +2,49 @@ const mongoose = require('mongoose');
 
 const BlogsSchema = new mongoose.Schema(
     {
-        name:{
-            type:String,
-            required: [true,"Please input a Store Name"],
-            minLength:[3,'Minimum length is {MINLENGTH}.'],
+        name: {
+            type: String,
+            required: [true, "Please input a Store Name"],
+            minLength: [3, 'Minimum length is {MINLENGTH}.'],
         },
-        description:{
-            type:String,
-            required:[true,"Enter a description"],
-            min:[1,'Must be a unique number greater than 0'],
+        description: {
+            type: String,
+            required: [true, "Enter a description"],
+            min: [1, 'Must be a unique number greater than 0'],
         },
-        sports:{
-            type:Boolean,
-            default:false,
+        sports: {
+            type: Boolean,
+            default: false,
         },
-        inspiration:{
-            type:Boolean,
-            default:false,
+        inspiration: {
+            type: Boolean,
+            default: false,
         },
-        beauty:{
-            type:Boolean,
-            default:false,
+        beauty: {
+            type: Boolean,
+            default: false,
+        },
+        book: {
+            type: Boolean,
+            default: false,
+        },
+        coding: {
+            type: Boolean,
+            default: false,
+        },
+        fashion: {
+            type: Boolean,
+            default: false,
+        },
+        gym: {
+            type: Boolean,
+            default: false,
         },
 
     },
-        {timestamps:true}
+    { timestamps: true }
 );
 
-const Blogs = mongoose.model('Blogs',BlogsSchema);
+const Blogs = mongoose.model('Blogs', BlogsSchema);
 
-module.exports = {Blogs:Blogs}
+module.exports = { Blogs: Blogs }
