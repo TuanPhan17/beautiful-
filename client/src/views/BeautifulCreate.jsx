@@ -52,33 +52,29 @@ export default function BeautifulPeople(props) {
 
     return (
 
-        <div>
+        <div className='min-h-screen  bg-blue-300'>
 
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                <h1>Beautiful Create Post</h1>
-                <a href='/'>Go back to Home</a>
-
-            </div>
+            <div className='align-center'><h1>Beautiful Create Post</h1></div>
             <hr></hr>
 
-            <form onSubmit={(event) => { handleCreateSubmitButton(event) }}>
+            <form className='grid  place-items-center' onSubmit={(event) => { handleCreateSubmitButton(event) }}>
 
                 <p>Blog Name:</p>
-                <input type="text" value={name}
+                <input className="appearance-none block  bg-gray-200 text-gray-700 border border-red-500 rounded  leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" value={name}
                     onChange={(event) => { setName(event.target.value); }}></input>
 
-                <p>Blog Description</p>
-                <textarea type="text" value={description}
+                <p>Blog Description: </p>
+                <textarea  className=" bg-gray-200"type="text" value={description}
                     onChange={(event) => { setDescription(event.target.value); }}></textarea>
 
 
                 <br />
 
 
-                <div id="blog" class="check_list">
-                    <span class="category">Select Category:</span>
-                    <ul class="items">
+                <div id="blog" className="check_list">
+                    <span className="category">Select Category:</span>
+                    <ul className="items">
                         <li><input
                             type="checkbox"
                             onChange={(event) => {
@@ -88,6 +84,7 @@ export default function BeautifulPeople(props) {
 
                         <li><input
                             type="checkbox"
+
                             onChange={(event) => {
                                 setInspiration(event.target.checked);
                             }}
@@ -130,7 +127,7 @@ export default function BeautifulPeople(props) {
                     </ul>
                 </div>
 
-                <input type="submit" />
+                <input  className="bg-purple-300 rounded-full w-20" type="submit" />
 
             </form>
         </div>
