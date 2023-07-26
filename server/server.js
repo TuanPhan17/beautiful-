@@ -5,7 +5,7 @@ require('./config/mongoose.config');
 
 const addUsersRoutes = require('./routes/users.routes');
 const addBlogsRoutes = require('./routes/blogs.routes');
-const port = process.env.API_PORT;
+const port = process.env.PORT;
 
 const app = express();
 

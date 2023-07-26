@@ -99,7 +99,7 @@ export default function ShowAllProductView(props) {
                 />
                 <br />
                 <label className='mb-3'>Password:</label>
-                <input type="text" 
+                <input type="text"
                     onChange={(event) => {
                         setPassword(event.target.value)
                     }}
@@ -111,45 +111,5 @@ export default function ShowAllProductView(props) {
 
         </div>
     )
-
-}
-
-
-
-
-
-
-    return (
-
-        <div>
-
-
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                <h1>Note</h1>
-                <a href='/'>Go back to Home</a>
-
-            </div>
-            <hr></hr>
-
-            <form onSubmit={(event) => { handleCreateSubmitButton(event) }}>
-
-                <p>Blog Name:</p>
-                <input type="text" value={name}
-                    onChange={(event) => { setName(event.target.value); }}></input>
-
-                <p>Blog Dexcription</p>
-                <textarea type="text" value={description}
-                    onChange={(event) => { setDescription(event.target.value); }}></textarea>
-
-
-                <br />
-
-                <input type="submit" />
-            </form>
-        </div>
-
-
-    )
-
 
 }
